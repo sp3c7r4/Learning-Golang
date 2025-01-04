@@ -32,5 +32,4 @@ func main() {
 	// Formating Variables
 	fmt.Printf("Thank you %v for booking %v tickets. You will recieve a confirmation email at %v \n", bookings[0], userTickets, email)
 	fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
-	
 }
