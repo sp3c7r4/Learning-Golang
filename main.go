@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	conferenceName := "Go conference"
@@ -12,25 +15,41 @@ func main() {
 	//Array type
 	var bookings []string;
 	
-	//Asking for user Input
-	fmt.Println("Enter your first name: ")
-	fmt.Scan(&firstName)
-	fmt.Println("Enter your last name: ")
-	fmt.Scan(&lastName)
-	fmt.Println("Enter your email: ")
-	fmt.Scan(&email)
-	fmt.Println("Enter the number of tickets you wanna buy: ")
-	fmt.Scan(&userTickets)
+	fmt.Printf("Welcome to %v booking application\n", conferenceName)
+
+	for remainingTickets > 0 && len(bookings) < 50 {
+		//Asking for user Input
+		fmt.Println("Enter your first name: ")
+		fmt.Scan(&firstName)
+		fmt.Println("Enter your last name: ")
+		fmt.Scan(&lastName)
+		fmt.Println("Enter your email: ")
+		fmt.Scan(&email)
+		fmt.Println("Enter the number of tickets you wanna buy: ")
+		fmt.Scan(&userTickets)
 	
-	remainingTickets = remainingTickets - uint(userTickets)
-	bookings = append(bookings, firstName + " " + lastName)
-	fmt.Printf("The whole array: %v\n", bookings)
-	fmt.Printf("The first value: %v\n", bookings[0])
-	fmt.Printf("Array Type: %T\n", bookings)
-	fmt.Printf("Array Size: %T\n", len(bookings))
+		if userTickets < int(remainingTickets)  {
+			remainingTickets = remainingTickets - uint(userTickets)
+			bookings = append(bookings, firstName + " " + lastName)
 	
-	// Formating Variables
-	fmt.Printf("Thank you %v for booking %v tickets. You will recieve a confirmation email at %v \n", bookings[0], userTickets, email)
-	fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
+			fmt.Printf("Thank you %v for booking %v tickets. You will recieve a confirmation email at %v \n", bookings[0], userTickets, email)
+			fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
 	
+			var firstNames = []string{}
+			for _ , booking := range bookings {
+				var names = strings.Fields(booking)
+				firstNames = append(firstNames, names[0])
+			}
+			fmt.Printf("These first names  of bookings are: %v \n", firstNames)
+			noTicketsRemaining := remainingTickets == 0
+			if noTicketsRemaining {
+				fmt.Println("Our conference is booked out. Come back next year")
+				break;
+			}
+		} else if userTickets == int(remainingTickets) {
+			fmt.Printf("Same Tickets")
+		} else {
+			fmt.Printf("We only have %v tickets ramaining, so you can't book %v tickets\n", remainingTickets, userTickets)
+		}
+	}
 }
