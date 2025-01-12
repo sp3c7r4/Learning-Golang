@@ -12,10 +12,14 @@ var lastName string
 var email string
 var userTickets int
 var remainingTickets = 50
+var bookings []string
+
+//Creating a map for a user
+var userData = make(map[string]string)
 
 //Array type
 func main() {
-	var bookings []string
+	
 	
 	greetUser("Spectra", conferenceName)
 	
@@ -29,11 +33,16 @@ func main() {
 		fmt.Scan(&email)
 		fmt.Println("Enter the number of tickets you wanna buy: ")
 		fmt.Scan(&userTickets)
-
+		
 		
 		//Validating user inputs
 		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 		if isValidName && isValidEmail && isValidTicketNumber {
+			//Using maps
+			userData["firstName"] = firstName;
+			userData["lastName"] = lastName;
+			userData["email"] = email
+
 			remainingTickets = remainingTickets - userTickets
 			bookings = append(bookings, firstName+" "+lastName)
 			
