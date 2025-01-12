@@ -1,18 +1,20 @@
-package main
+package main;
 
 import (
+	"learning-go/helper"
 	"fmt"
 	"strings"
 )
 
+var conferenceName = "Go conference"
+var firstName string
+var lastName string
+var email string
+var userTickets int
+var remainingTickets = 50
+
+//Array type
 func main() {
-	conferenceName := "Go conference"
-	var firstName string
-	var lastName string
-	var email string
-	var userTickets int
-	var remainingTickets int = 50
-	//Array type
 	var bookings []string
 	
 	greetUser("Spectra", conferenceName)
@@ -30,7 +32,7 @@ func main() {
 
 		
 		//Validating user inputs
-		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets, remainingTickets)
+		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 		if isValidName && isValidEmail && isValidTicketNumber {
 			remainingTickets = remainingTickets - userTickets
 			bookings = append(bookings, firstName+" "+lastName)
@@ -72,11 +74,4 @@ func getFirstNames(bookings []string) []string {
 		firstNames = append(firstNames, names[0])
 	}
 	return firstNames;
-}
-
-func validateUserInput(firstName string, lastName string, email string, userTickets int, remainingTickets int) (bool, bool, bool) {
-	isValidName := len(firstName) >= 2 && len(lastName) >= 2
-	isValidEmail := strings.Contains(email, "@")
-	isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets
-	return isValidName, isValidEmail, isValidTicketNumber
 }
