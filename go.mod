@@ -1,3 +1,3 @@
-module learning-go
+module hello-go
 
 go 1.23.3
