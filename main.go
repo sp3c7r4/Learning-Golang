@@ -29,15 +29,25 @@ func main() {
 	// fmt.Println("Integer to Float:", tempFloat);
 	// fmt.Printf("Integer to Float [Including decimals]: %.10f\n", tempFloat);
 	// fmt.Printf("Data Type: %T\n", tempFloat) /* float 64 */
-	str := strconv.Itoa(80);
-	fmt.Println(str);
-	fmt.Printf("%T\n", str);
+	// str := strconv.Itoa(80);
+	// fmt.Println(str);
+	// fmt.Printf("%T\n", str);
 	
-	var myStr string = "42"
-	var myIntFromString, _ = strconv.Atoi(myStr);
-	fmt.Println("String to Integer:", myIntFromString);
-	fmt.Printf("%T\n", myIntFromString);
+	// var myStr string = "42"
+	// var myIntFromString, _ = strconv.Atoi(myStr);
+	// fmt.Println("String to Integer:", myIntFromString);
+	// fmt.Printf("%T\n", myIntFromString);
 
 	/* + */ 
-	
+	/* String to Float */
+	// var myFloatStr string = "3.14159"
+	// var myFloatFromString, _ = strconv.ParseFloat(myFloatStr, 64)
+	// fmt.Println("String to Float:", myFloatFromString)
+	// fmt.Printf("%T\n", myFloatFromString)
+
+	/* Converting Strings to Floats */
+	// This accepts any of these as inputs 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False
+	// var myBooleanString = "T"
+	// var myBooleanFromString, _ = strconv.ParseBool(myBooleanString)
+	// fmt.Println(myBooleanFromString)
 }
