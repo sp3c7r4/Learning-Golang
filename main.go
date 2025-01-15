@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+	// "strconv"
 );
 
 func main() {
@@ -50,4 +50,22 @@ func main() {
 	// var myBooleanString = "T"
 	// var myBooleanFromString, _ = strconv.ParseBool(myBooleanString)
 	// fmt.Println(myBooleanFromString)
+
+	// const Agency string = "Fast Tracks";
+	// const (
+	// 	Agency1 = "Spectra"
+	// 	Agency2 = "Gee"
+	// 	Agency3 = "Mj"
+	// )
+	// fmt.Println(Agency)
+	// fmt.Println(Agency1, Agency2, Agency3)
+	// const (
+	// 	Economy = iota
+	// 	Compact
+	// )
+	// fmt.Println("Economy", Economy)
+	// fmt.Println("Compact", Compact)
+	
+
+
 }
