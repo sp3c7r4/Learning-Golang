@@ -1,26 +1,43 @@
+/* Temperature conversion Utility */
 package main
 
 import (
 	"fmt"
-	"strings"
+	"strconv"
 );
 
 func main() {
-	/*
-	+ Unsigned Integers +
-	uint => Means can only be used for zero (0) or positive integers
-	8 => Refers to it's size which is 8 bits [ Max value is 255 ]
-	16 => Refers to it's size which is 16 bits [ Max value is 65535 ]
-	32 & 64 too
-	+ Signed Integers +
-	int => Means can only be used for Negative(-) and Positive(+) Integers
-	8 => Signed 8-bit integers -128 to 127
-	16 => -32768 to 32767
-	32 & 64 
-	+ Floats +
-	float => Precision-point number
-	32 => 32-bit Single precision floating-point number [ 3.4 * 10^38]
-	64 => 64-bit Double precision floating number [ 3.4 * 10^308 ]
-	*/
-	var tinyUint uint8 = 200
+	// var temperatureF float64
+	// temperatureK := 288.15
+	// temperatureF = (temperatureK - 273.15 ) * 1.8 + 32
+
+	// fmt.Println("Temperature in Ferenheit: ",temperatureF)
+
+	// var temperatureKnew float64
+	// var temperatureFnew float64 = 70
+	// temperatureKnew = (temperatureFnew - 32 ) / 1.8 + 273.15
+
+	// fmt.Println("Temperature in Kelvin: ", temperatureKnew)
+
+	/* Math Functions */
+	// fmt.Println("Square Root:", math.Sqrt(16)) // 4
+
+	/* Type conversions */
+	// Integer to Float
+	// var tempInt int = 10;
+	// var tempFloat float64 = float64(tempInt);
+	// fmt.Println("Integer to Float:", tempFloat);
+	// fmt.Printf("Integer to Float [Including decimals]: %.10f\n", tempFloat);
+	// fmt.Printf("Data Type: %T\n", tempFloat) /* float 64 */
+	str := strconv.Itoa(80);
+	fmt.Println(str);
+	fmt.Printf("%T\n", str);
+	
+	var myStr string = "42"
+	var myIntFromString, _ = strconv.Atoi(myStr);
+	fmt.Println("String to Integer:", myIntFromString);
+	fmt.Printf("%T\n", myIntFromString);
+
+	/* + */ 
+	
 }
