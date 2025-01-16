@@ -81,8 +81,8 @@ func main() {
 	// } else {
 	// 	fmt.Println("Thank you for driving within the speed limit!")
 	// }
-	const upperSpeedLimit, lowerSpeedLimit int = 120, 30
-	speed := 120
+	// const upperSpeedLimit, lowerSpeedLimit int = 120, 30
+	// speed := 120
 	// if speed == upperSpeedLimit {
 	// 	fmt.Println("You're driving at max allowed speed, Be careful")
 	// } else if speed == lowerSpeedLimit {
@@ -94,11 +94,68 @@ func main() {
 	// } else {
 	// 	fmt.Println("Thank you for driving within speed limits!")
 	// }
-	if speed >= upperSpeedLimit {
-		fmt.Println("You're going too fast, slow down!")
-	} else if speed <= lowerSpeedLimit {
-		fmt.Println("You're going too slow, This is dangerous too!")
-	} else {
-		fmt.Println("Thank you for driving within speed limits!")
-	}
+	// if speed >= upperSpeedLimit {
+	// 	fmt.Println("You're going too fast, slow down!")
+	// } else if speed <= lowerSpeedLimit {
+	// 	fmt.Println("You're going too slow, This is dangerous too!")
+	// } else {
+	// 	fmt.Println("Thank you for driving within speed limits!")
+	// }
+
+	/* Logical Operators */
+	/* Write a program to classify the days of a Week */
+
+	// isWeekend := true 
+	// isHoliday := false
+	// if isWeekend && isHoliday {
+	// 	fmt.Println("It's a holiday on a weekend!!")
+	// } else if isWeekend && !isHoliday {
+	// 	fmt.Println("It's a regular weekend day.")
+	// } else if !isWeekend && isHoliday {
+	// 	fmt.Println("It's a weekday but a holiday")
+	// } else {
+	// 	fmt.Println("It's a regular day!")
+	// }
+
+	// var isWeekend bool = true
+	// var isHoliday bool = false;
+	// isDayoff := isWeekend || isHoliday;
+
+	// if isDayoff {
+	// 	fmt.Println("It's a day off!")
+	// }
+
+	// /* Program that interpretes color meanings */
+	// color := "yellow"
+	// switch color {
+	// case "red":
+	// 	fmt.Println("Red: Passion and Energy")
+	// case "green":
+	// 	fmt.Println("Green: Growth and Harmony")
+	// case "blue":
+	// 	fmt.Println("Blue: Calm and Trust")
+	// case "yellow":
+	// 	fmt.Println("Yellow: Optimism and Happiness")
+	// default:
+	// 	fmt.Println("Unknown Color")
+	// } 
+	/* Day checker Program */
+	// day := "Tue"
+	// switch day {
+	// case "Mon", "Tue", "Wed", "Thu", "Fri":
+	// 	fmt.Println("Week Day")
+	// case "Sat", "Sun":
+	// 	fmt.Println("Weekend")
+	// default:
+	// 	fmt.Println("Invalid day")
+	// }
+	// age := 25;
+	// switch {
+	// case age < 18:
+	// 	fmt.Println("Minor")
+	// case age >= 18 && age < 60:
+	// 	fmt.Println("Adult")
+	// case age >= 60:
+	// 	fmt.Println(("Senior"))
+	// }
 }
