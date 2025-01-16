@@ -1,10 +1,14 @@
 /* Temperature conversion Utility */
 package main
 
-import (
-	"fmt"
-	// "strconv"
-);
+import "fmt"
+
+// "crypto/rand"
+// "fmt"
+// "math/rand"
+// "strings"
+// "strings"
+// "strconv";
 
 func main() {
 	// var temperatureF float64
@@ -158,4 +162,154 @@ func main() {
 	// case age >= 60:
 	// 	fmt.Println(("Senior"))
 	// }
-}
+
+	/* 
+	User access Permissions 
+		+ Admin [ Full Access ]
+		+ Editor [ Publish, write, view]
+		+ Contributor [ Write, View ]
+		+ Viewer [ View ]
+	*/
+		// userRole := "editor";
+		// fmt.Printf("Access permissions for role '%s':\n", userRole)
+		// switch userRole {
+		// case "admin":
+		// 	fmt.Println("- Full system access")
+		// 	/* The fallthrough keyword tells the program to continue to the next case without checking this conditon */
+		// 	fallthrough;
+		// case "editor":
+		// 	fmt.Println("- Can publish content")
+		// 	fallthrough;
+		// case "contributor":
+		// 	fmt.Println("- Can write content")
+		// 	fallthrough;
+		// case "viewer":
+		// 	fmt.Println("- Can view content")
+		// default:
+		// 	fmt.Println("- No access")
+		// }
+
+		/* Looping[for] */
+		// for i := 0; i < 5; i++ {
+		// 	fmt.Println("Simple loop iteration:",i)
+		// }
+
+		// 	for j := 0; j < 10; j++ {
+		// 		if j%2 == 0 { // Skips even Numbers
+		// 			/* Skips the remaining body of the Iteration and Starts another iteration instance */
+		// 			continue;
+		// 		}
+		// 		fmt.Println("Odd number:",j)
+		// 	}
+	// i := 0
+	// for {
+	// 	fmt.Println("Infinite loop, iteration:", i)
+	// 	i++
+	// 	/* Break: Allows the loop to Exit Immediately */
+	// 	if i == 3 { break; } // Breaks Infinite Loop
+	// }
+
+	/* Another Loop Example */
+	// y := 0
+	// for y < 3 {
+	// 	fmt.Println("Loop Example:", y)
+	// 	y++
+	// }
+
+	/* Rock Paper Scissors */
+	// var computerChoice string;
+	// Game()
+
+	/* Arrays */
+	// Declaring an Array
+	// var bodyTypes [3]string;
+	// fmt.Println(bodyTypes) // Returns an Array with 3 Empty Strings
+	
+	// /* Adding Array items using the Indexing Syntax */
+	// bodyTypes[0] = "Sedan"
+	// bodyTypes[1] = "SUV"
+	// bodyTypes[2] = "Convertible"
+	// /* Declaring and Initializing Array in one go */
+	// bodyTypes := [3]string{"Sedan","SUV","Convertible"}
+	// fmt.Println(bodyTypes)
+
+	// /* Accessing/Getting individual Items of an Array */
+	// fmt.Println(bodyTypes[0])
+	// fmt.Println(bodyTypes[1])
+	// fmt.Println(bodyTypes[2])
+
+	/* 2D Arrays */
+	// 2-Dimensional (2D) Arrays
+	// var carFleet [3][2]string;
+	// carFleet[0] = [2]string{"5 Spectra Gee", "unlimited Brains"}
+	// carFleet[1] = [2]string{"3 SUVs Available", "4 SUVs Booked"}
+	// carFleet[2] = [2]string{"1 SUVs Available", "1 Convertible Booked"}
+
+	// fmt.Println(carFleet)
+
+	// /* Slices */
+	// fuelTypes := []string{"Electric", "Gasoline", "Hybrid"}
+	// fmt.Println(fuelTypes)
+
+	// /*
+	// append => This allows us to add items to slices
+	// + Note: append doesn't modify the original slice it creates a new slice with the new data that has been added
+	// */
+	// fuelTypes = append(fuelTypes, "Diesel")
+	// fmt.Println(fuelTypes)
+	// /*
+	// Append also allows us to add multiple data to a slice
+	// */
+
+	// fuelTypes = append(fuelTypes, "Spectra", "Gee")
+	// fmt.Println(fuelTypes)
+
+	/* Another Example */
+	/*
+	make => This is a built-in function and we can use it to initialize a slice with a redefined length
+	*/
+	// fuelTypes := make([]string, 3)
+	// fmt.Println(len(fuelTypes))
+	// fmt.Println("The slice is nil:", fuelTypes == nil)
+	// fmt.Println(fuelTypes)
+
+	// fuelTypes := []string{"Gasoline", "Diesel", "Electric", "Hybrid", "Hydrogen"}
+	// popular := fuelTypes[0:2];
+	// fmt.Println("Popular:",popular)
+
+	// clean := fuelTypes[2:]
+	// fmt.Println("Clean:",clean)
+
+	// electricHybrid := fuelTypes[2:4]
+	// fmt.Println("Electric Hybrid:",electricHybrid)
+  /* Maps */
+	// make(map[keyDataType]valueDataType)
+	// carInventory := make(map[string]int)
+	// carInventory["Sedan"] = 25
+	// carInventory["SUV"] = 15
+	// carInventory["Convertible"] = 10
+
+	// fmt.Println("Car Inventory:",carInventory)
+
+	/* Initializing maps in one statement */
+	carInventory := map[string]int{
+		"Sedan":25,
+		"SUV":15,
+		"Convertible":10,
+	}
+
+	fmt.Println("Types of card:",len(carInventory))
+	carInventory["Sedan"] = 20
+	
+	//Removing Entries from a Map we use the delete() keyword
+	delete(carInventory, "SUV")
+	
+	// 
+	numberOfSedans := carInventory["Sedan"]
+	fmt.Printf("We have %v Sedans\n", numberOfSedans)
+	
+	// If the key doesn't exist you get the 0 value of the value type
+	fmt.Printf("We have %v Coupes\n", carInventory["Coupe"])
+	
+	fmt.Println("Car Inventory:",carInventory)
+} 
