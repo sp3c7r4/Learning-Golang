@@ -292,24 +292,36 @@ func main() {
 	// fmt.Println("Car Inventory:",carInventory)
 
 	/* Initializing maps in one statement */
-	carInventory := map[string]int{
-		"Sedan":25,
-		"SUV":15,
-		"Convertible":10,
-	}
+	// carInventory := map[string]int{
+	// 	"Sedan":25,
+	// 	"SUV":15,
+	// 	"Convertible":10,
+	// }
 
-	fmt.Println("Types of card:",len(carInventory))
-	carInventory["Sedan"] = 20
+	// fmt.Println("Types of card:",len(carInventory))
+	// carInventory["Sedan"] = 20
 	
 	//Removing Entries from a Map we use the delete() keyword
-	delete(carInventory, "SUV")
+	// delete(carInventory, "SUV")
 	
-	// 
-	numberOfSedans := carInventory["Sedan"]
-	fmt.Printf("We have %v Sedans\n", numberOfSedans)
+	// Checking if a Key Exists
+	// numberOfSedans, sedansFound := carInventory["Sedan"]
+	// if sedansFound { fmt.Printf("Sedans Exists in our Map | We have %v sedans\n", numberOfSedans) }
+	
+	/* Short Form */
+	// if numberOfSedans, ok := carInventory["Sedan"]; ok {
+	// 	fmt.Printf("Sedans Exists | We have %v Sedans\n", numberOfSedans)
+	// }
+
+	// fmt.Printf("We have %v Sedans\n", numberOfSedans)
 	
 	// If the key doesn't exist you get the 0 value of the value type
-	fmt.Printf("We have %v Coupes\n", carInventory["Coupe"])
+	// fmt.Printf("We have %v Coupes\n", carInventory["Coupe"])
 	
-	fmt.Println("Car Inventory:",carInventory)
+	// fmt.Println("Car Inventory:",carInventory)
+	
+	/* Clearing all Map Values using the clear() function */
+	// clear(carInventory)
+	// fmt.Println("Cleared Car Inventory:",carInventory)
+	
 } 
