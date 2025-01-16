@@ -65,7 +65,40 @@ func main() {
 	// )
 	// fmt.Println("Economy", Economy)
 	// fmt.Println("Compact", Compact)
-	
+	/* Getting User's Input */
+	// fmt.Println("What's your name?")
+	// var name string;
+	// fmt.Scanln(&name)
 
+	// fmt.Printf("Hello, %v", name)
 
+	// isFast := false
+	// isSlow := true
+	// if isFast {
+	// 	fmt.Println("You're going too fast, slow down")
+	// } else if isSlow {
+	// 	fmt.Println("You're going too slow, This is dangerous too!")
+	// } else {
+	// 	fmt.Println("Thank you for driving within the speed limit!")
+	// }
+	const upperSpeedLimit, lowerSpeedLimit int = 120, 30
+	speed := 120
+	// if speed == upperSpeedLimit {
+	// 	fmt.Println("You're driving at max allowed speed, Be careful")
+	// } else if speed == lowerSpeedLimit {
+	// 	fmt.Println("You're driving very very slow!")
+	// } else if speed > upperSpeedLimit {
+	// 	fmt.Println("You're going too fast, slow down!")
+	// } else if speed < lowerSpeedLimit {
+	// 	fmt.Println("You're going too slow, This is dangerous too!")
+	// } else {
+	// 	fmt.Println("Thank you for driving within speed limits!")
+	// }
+	if speed >= upperSpeedLimit {
+		fmt.Println("You're going too fast, slow down!")
+	} else if speed <= lowerSpeedLimit {
+		fmt.Println("You're going too slow, This is dangerous too!")
+	} else {
+		fmt.Println("Thank you for driving within speed limits!")
+	}
 }
