@@ -342,29 +342,44 @@ func main() {
 	// }  
 
 	/* Maps */
-	carInventory := map[string]int{
-		"Sedan":25,
-		"SUV":7,
-		"Convertible":10,
-		"Hatchback":8,
-	}
+	// carInventory := map[string]int{
+	// 	"Sedan":25,
+	// 	"SUV":7,
+	// 	"Convertible":10,
+	// 	"Hatchback":8,
+	// }
 
-	for bodyType, count := range carInventory {
-		fmt.Printf("%v -> %v\n", bodyType, count)
-	}
+	// for bodyType, count := range carInventory {
+	// 	fmt.Printf("%v -> %v\n", bodyType, count)
+	// }
 	
-	for bodyType := range carInventory {
-		fmt.Printf("%v\n", bodyType)
-	}
+	// for bodyType := range carInventory {
+	// 	fmt.Printf("%v\n", bodyType)
+	// }
 
-	for _, count := range carInventory {
-		fmt.Printf("%v\n", count)
-	}
+	// for _, count := range carInventory {
+	// 	fmt.Printf("%v\n", count)
+	// }
 
-	totalInventory := 0
-	for _, count := range carInventory {
-		totalInventory += count
-	}
+	// totalInventory := 0
+	// for _, count := range carInventory {
+	// 	totalInventory += count
+	// }
 
-	fmt.Printf("%v cars in total\n", totalInventory)
+	// fmt.Printf("%v cars in total\n", totalInventory)
+	/* Palindromes */
+	// var userInput string;
+	// var storedInput string;
+	// fmt.Println("Enter your text:")
+	// fmt.Scanln(&userInput)
+	// for i := len(userInput); i > 0; i-- {
+	// 	storedInput += string(userInput[i-1])
+	// }
+	// if (userInput == storedInput) {
+	// 	fmt.Println("Palindrome check passed")
+	// } else {
+	// 		fmt.Println("Not a palindrome")
+	// }
+
+	/* Functions */
 } 
