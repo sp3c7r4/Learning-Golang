@@ -324,4 +324,47 @@ func main() {
 	// clear(carInventory)
 	// fmt.Println("Cleared Car Inventory:",carInventory)
 	
+	// /* For Range Loop=> Iterating over 2d arrays / Slices */
+	// // Using for range with arrays, slices and maps
+	// bodyTypes := [3]string{"Sedan","SUV","Convertible"}
+	// for i, bodyType := range bodyTypes {
+	// 	fmt.Printf("Index: %v. Item: %v\n",i,bodyType)
+	// }
+
+	// // Specifying only one value in the loop captures only the Index
+	// for i := range bodyTypes {
+	// 	fmt.Printf("Index: %v\n", i)
+	// }
+
+	// // If it's only the items/values i need to use a blank Identifier  _ to discard the index
+	// for _, bodyType := range bodyTypes {
+	// 	fmt.Printf("Item: %v\n", bodyType)
+	// }  
+
+	/* Maps */
+	carInventory := map[string]int{
+		"Sedan":25,
+		"SUV":7,
+		"Convertible":10,
+		"Hatchback":8,
+	}
+
+	for bodyType, count := range carInventory {
+		fmt.Printf("%v -> %v\n", bodyType, count)
+	}
+	
+	for bodyType := range carInventory {
+		fmt.Printf("%v\n", bodyType)
+	}
+
+	for _, count := range carInventory {
+		fmt.Printf("%v\n", count)
+	}
+
+	totalInventory := 0
+	for _, count := range carInventory {
+		totalInventory += count
+	}
+
+	fmt.Printf("%v cars in total\n", totalInventory)
 } 
